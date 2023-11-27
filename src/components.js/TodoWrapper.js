@@ -3,15 +3,19 @@ import { TodoForm } from './TodoForm'
 import { ToDo } from './ToDo'
 import { EditTodo } from './EditTodo'
 import '../style.css';
+import {swal} from '../helper/sweetAlert'
 
 
 export const TodoWrapper = () => {
   const [todos,setTodos] = useState([])
 
   const addTodo = todo => {
+    const existingtodo = todos.find(todoex => todoex.task.trim().toLowerCase() === todo.trim().toLowerCase() )
+    existingtodo ? swal("Error!","This task already exist","error"):
     setTodos([{id:Date.now(),task:todo,
-    completed:false,isEditing:false},...todos])
-    console.log(todos)
+      completed:false,isEditing:false},...todos])
+    
+    
   }
 
   const toggleComplete = id => {
@@ -29,6 +33,8 @@ export const TodoWrapper = () => {
   }
 
   const editTask = (task, id) => {
+    const existingedittodo = todos.find(todoex => todoex.task.trim().toLowerCase() === task.trim().toLowerCase() && todoex.id !== id )
+    existingedittodo ? swal("Error!","THis text already exist ","error"):
     setTodos(todos.map(todo => todo.id === id ? {
       ...todo, task, isEditing: !todo.isEditing}:todo
     ))
