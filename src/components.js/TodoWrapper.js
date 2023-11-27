@@ -14,8 +14,7 @@ export const TodoWrapper = () => {
     existingtodo ? swal("Error!","This task already exist","error"):
     setTodos([{id:Date.now(),task:todo,
       completed:false,isEditing:false},...todos])
-    
-    
+      swal("Success!","This task added successfully","success")
   }
 
   const toggleComplete = id => {
@@ -25,6 +24,7 @@ export const TodoWrapper = () => {
 
   const deleteTodo = id => {
     setTodos(todos.filter( todo => todo.id !== id))
+    swal("Success!","This task deleted successfully","success")
   }
 
   const editTodo = id => {
@@ -38,6 +38,7 @@ export const TodoWrapper = () => {
     setTodos(todos.map(todo => todo.id === id ? {
       ...todo, task, isEditing: !todo.isEditing}:todo
     ))
+    swal("Success!","This task edited successfully","success")
   }
 
   return (
