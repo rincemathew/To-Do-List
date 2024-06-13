@@ -6,8 +6,9 @@ import ContactList from './ContactList';
 function App() {
   return (
     <div className="App">
-      <div>Hello world </div>
-      
+      <Header></Header>
+      <AddContact></AddContact>
+      <ContactList></ContactList>
     </div>
   );
 }
