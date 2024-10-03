@@ -1,14 +1,14 @@
 
 import Header from './Header';
-import AddContact from './AddContact';
-import ContactList from './ContactList';
+import AddToDo from './AddToDo';
+import ToDoList from './ToDoList';
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <AddContact></AddContact>
-      <ContactList></ContactList>
+      <AddToDo></AddToDo>
+      <ToDoList></ToDoList>
     </div>
   );
 }
