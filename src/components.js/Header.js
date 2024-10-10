@@ -113,6 +113,7 @@ function Header() {
       <div>tags</div>
       <div>add tags</div>
       <div>add button</div>
+      <hr class="w-full h-0.5 my-8 border-0 rounded bg-slate-400"></hr>
     </>
   );
 }
