@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App bg-white w-full h-full">
       <Header></Header>
-      <AddToDo></AddToDo>
       <ToDoList></ToDoList>
     </div>
   );
