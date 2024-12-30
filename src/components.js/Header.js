@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -118,7 +119,9 @@ function Header() {
       <span className="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Yellow</span>
       </div>
       <div className="flex justify-center p-2">
+        <Link to='/add-to-do'>
        <button type="button" className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add To Do +</button>
+       </Link>
       </div>
       <hr className="w-full h-0.5 my-8 border-0 rounded bg-slate-400"></hr>
     </>
